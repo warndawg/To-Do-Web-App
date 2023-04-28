@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>To Do List</title>
+</head>
+<body>
+    <div class="outer">
+        <nav class="navbar bg-dark text-light">
+          <!-- navbar not needed but looks cool -->
+          <h1>To Do List Application</h1>
+        </nav>
+        <div class="container-fluid">
+            <div class="row">
+                <!-- current saved slecectable lists on the left -->
+                <div class="col-4 bg-secondary vh-100">
+                    <div class="row p-2">
+                        <input id="listName" type="text" style="width: 100%;" placeholder="Enter Name of List">
+                    </div>    
+                    <div class="row p-2">
+                        <button class="btn btn-light btn-md btn-block btn-outline-dark" id="addListToStoredLists" style="width: 100%;">Create New To Do List</button>
+                    </div>
+                    <div class="col text-center">
+                        <h3>Your To Do Lists</h3>
+                    </div>
+                    <div id="lists">	
+                    </div>
+                    <div class="row p-2">  
+                        <button class="btn btn-light btn-md btn-block btn-outline-dark" id="deleteCurrentList" style="width: 100%;" onclick="removeList()">Delete Current List</button>
+                    </div>
+                    <div class="row p-2">                            
+                        <button class="btn btn-light btn-md btn-block btn-outline-dark" id="resetStorage" style="width: 100%;" onclick="removeAllLists()">Reset Storage</button>
+                    </div>        	
+                </div>
+                <!-- To do list item on the current selected list -->
+                <div class="col-8 bg-light">
+                    <div class="col text-center p-2">
+                        <h2 id="currentListName"></h2>
+                    </div>    
+                    <div class="row p-2" id="createItem">
+                        <input type="text" id='toDoItem' name="toDoItem" style="width: 100%;">
+                    </div>
+                    <div class="row p-2">    
+                            <button class="btn btn-light btn-md btn-block btn-outline-dark" id="addListItem">Add To Do Item</button>
+                    </div> 
+                    <div class="justify-center container-fluid" id="current-list-todos"></div>   
+                    <div class="row p-2" id="list">
+                            <button class="btn btn-light btn-md btn-block btn-outline-dark" onclick="removeCompleted()">Remove Completed Items</button>  
+                    </div>	
+                </div>    
+            </div>
+        </div>
+    </div>
+    <!-- Optional JavaScript -->
+    <script src="/replacment.js"></script>
+    <!--Animation CSS-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.11/animate.min.css"/>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>
