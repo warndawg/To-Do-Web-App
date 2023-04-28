@@ -96,9 +96,9 @@ function render() {
     let todosHtml = '<div class="list-group-flush p-2">';
     currentList.ToDoS.forEach((currentList) => {
         if (currentList.completed == true) {
-            todosHtml += `<div class="list-group-item h2" id="${currentList.text}" onclick="checkOffItem()"><img src="/images/checkbox.png" width="25" height="25"><span>  ${currentList.text}</div>`;
+            todosHtml += `<div class="list-group-item h2" id="${currentList.text}" onclick="checkOffItem()"><img src="images/checkbox.png" width="25" height="25"><span>  ${currentList.text}</div>`;
         } else {
-            todosHtml += `<div class="list-group-item h2" id="${currentList.text}" onclick="checkOffItem()"><img src="/images/unchecked.png" width="25" height="25"><span>  ${currentList.text}</div>`;
+            todosHtml += `<div class="list-group-item h2" id="${currentList.text}" onclick="checkOffItem()"><img src="images/unchecked.png" width="25" height="25"><span>  ${currentList.text}</div>`;
         }    
     });
 
@@ -161,7 +161,7 @@ checkOffItem = () => {
     let id = item.id;
     let indextoChange = currentList.ToDoS.findIndex(x => x.text == id);
     currentList.ToDoS[indextoChange].completed = true;
-    item.innerHTML = `<img src="/images/checkbox.png" width="25" height="25"><span> ${item.id}</div>`;
+    item.innerHTML = `<img src="images/checkbox.png" width="25" height="25"><span> ${item.id}</div>`;
     saveStoredLists();
     saveCurrentList();
 }
